@@ -32,7 +32,7 @@ const HomeScreen = () => {
 
     const fetchWeatherData = (searchTerm) => {
       setLoading(true)
-      const query = searchTerm.length ? searchTerm : "newyork"
+      const query = searchTerm.length ? searchTerm : "Kerala"
       fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${query}?unitGroup=metric&include=days,hours&key=${API_KEY}`)
         .then((response) => response.json()).then(data => {
           setWeatherData(data)
@@ -61,7 +61,7 @@ const HomeScreen = () => {
 
   const getCurrentLocation = async () => {
     let {status} = await Location.requestForegroundPermissionsAsync()
-
+    
     if (status !== "granted") {
       Alert.alert('Permission denied', 'We need location permission to fetch weather data.')
       return
@@ -70,7 +70,6 @@ const HomeScreen = () => {
     let currentLocation = await Location.getCurrentPositionAsync({})
     setLocation(currentLocation)
     setUseLocation(true)
-    
   }
 
 
@@ -213,7 +212,7 @@ const weatherStyles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: 'rgba(255, 255, 255, 0.12)', // Semi-transparent background
+    backgroundColor: Color.secondaryBlack,
     borderRadius: 20,
     paddingVertical: 12,
     paddingHorizontal: 16,

@@ -27,7 +27,7 @@ const HomeHeader = ({  handleUseLocation,searchTerm, handleTextChange ,handleLoc
           }}>
             <LeftArrowIcon />
           </TouchableOpacity>
-            <TextInput value={location} onChangeText={(text) => setLocation(text)} placeholder='Choose a Location' style={styles.input} placeholderTextColor={Color.secondaryText} />
+            <TextInput onSubmitEditing={() => handleSubmit()} value={location} onChangeText={(text) => setLocation(text)} placeholder='Choose a Location' style={styles.input} placeholderTextColor={Color.secondaryText} />
           </>
           :
           <>

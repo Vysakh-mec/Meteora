@@ -27,7 +27,7 @@ export default RoundedWeatherItem
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:"rgba(255,255,255,0.2)",
+        backgroundColor:Color.secondaryBlack,
         marginHorizontal:10,
         alignItems:"center",
         borderRadius:999,

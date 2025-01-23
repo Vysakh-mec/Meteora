@@ -13,7 +13,6 @@ const WeatherListItem = ({ item }) => {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const date = new Date(item.datetime)
     const day = daysOfWeek[date.getDay()]
-    console.log(item.icon)
     const IconComponent = IconMap[item.icon]
 
     return (
@@ -63,7 +62,7 @@ export default WeatherListItem
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "rgba(255,255,255,0.15)",
+        backgroundColor: Color.secondaryBlack,
         marginHorizontal: 20,
         marginVertical: 16,
         padding: 20,
